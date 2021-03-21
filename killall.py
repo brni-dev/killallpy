@@ -14,7 +14,7 @@ if SHELL==None:
 cmdoutput=str(subprocess.check_output("ps -eo pid,command",shell=True).decode("utf-8")).split()
 last=""
 
-# Searches for the thingtokill value in each case-lowered element from the command output array
+# Searches for the arg value in each case-lowered element from the command output array
 for process in cmdoutput:
     if arg in str(process).lower():
         time.sleep(0.04)
