@@ -1,4 +1,4 @@
-import os, subprocess
+import os, subprocess, time
 
 print("Loading...")
 
@@ -16,6 +16,7 @@ print("Loaded! Terminating Spotify processes in-order to fix Spotify...\n")
 # Searches for "spotify" in each case-lowered element from the command output array
 for process in cmdoutput:
     if "spotify" in str(process).lower():
+        time.sleep(0.04)
         os.system("kill -kill " + last)
         print("Killed Spotify process " + str(last))
     else:
