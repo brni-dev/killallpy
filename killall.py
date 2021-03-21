@@ -16,7 +16,7 @@ print(f"Loaded! Terminating {thingtokill} processes\n")
 
 # Searches for the thingtokill value in each case-lowered element from the command output array
 for process in cmdoutput:
-    if "spotify" in str(process).lower():
+    if thingtokill in str(process).lower():
         time.sleep(0.04)
         os.system("kill -kill " + last)
         print("Killed {thingtokill} process " + str(last))
